@@ -1,6 +1,14 @@
+
+  
+
+
 *{
     margin : 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+
 
 }
 
@@ -26,9 +34,118 @@
 }
 .logo{
     
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 150px;
     cursor: pointer;
     background-blend-mode: lighten;
 
 }
+nav{
+    flex: 1;
+    padding-left: 90px;
+    background-color: antiquewhite;
+    width: 100%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+
+}
+#search{
+width: 400px;
+height: 20px;
+}
+
+.icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: #333333;
+    background: #dddddd;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+  }
+  
+  .icon-button:hover {
+    cursor: pointer;
+  }
+  
+  .icon-button:active {
+    background: #cccccc;
+  }
+  
+  .icon-button__badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background: red;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    display: flex;;
+    border-radius: 50%;
+  }
+
+  .wrapper{
+    display: flex;
+    position: relative;
+  }
+  .wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: antiquewhite;
+    padding: 60px 0;}
+
+    .wrapper .sidebar h2{
+        color: black;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+
+   
+
+  }
+  .wrapper .sidebar ul li{
+    padding: 20px;
+   
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+  }
+  .wrapper .sidebar ul li a{
+    color: black;
+    display: block;
+    list-style: none;
+
+  }
+  .wrapper .sidebar ul li a .fas{
+    width: 25px;
+    padding-left: 5%;
+
+  }
+  .wrapper .sidebar ul li:hover{
+    background: blueviolet;
+
+  }
+  
+  .wrapper .sidebar ul li:hover{
+    background: lightskyblue;
+
+  }
+  .content{
+    font-family: 'Times New Roman', Times, serif;
+  }
