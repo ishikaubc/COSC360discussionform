@@ -1,97 +1,90 @@
-<html>
+<!DOCTYPE html>
+<html lang = "en">
     <head>
+        <meta charset = "UTF-8">
         <title>My Discussion Forum</title>
         <link rel = "stylesheet" href = "homepage.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet" >
         <script src="https://kit.fontawesome.com/91e0677be1.js" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+
+            });
+        </script>
     </head>
+   
     <body>
-        <div class = "container">
-            <div class = "navbar">
-<img src = "chat logo design (2).png" class = "logo">
-                <nav>
-                    <ul>
-                   <li> <a class = "active" href = "#home">Home</a></li>
-                   <li><a href = "#login">Register</a></li>
-                  <li><input type="text" id = "search" placeholder="Search for topics"></li>
-                 <li><a><button type="button" class="icon-button">
-                    <span class="material-icons">notifications</span>
-                    <span class="icon-button__badge">2</span></a></li>
-                 </button>
+        <div class="wrapper">
+            <div class="top_navbar">
+              <div class="hamburger">
+                 <div class="one"></div>
+                 <div class="two"></div>
+                 <div class="three"></div>
+              </div>
+              <div class="top_menu">
+                <div class="logo">UBC Talks</div>
+                <ul>
+                  <li><a href="#">
+                    <i class="fas fa-search"></i></a></li>
+                  <li><a href="#">
+                    <i class="fas fa-bell"></i>
+                    </a></li>
+                  <li><a href="#">
+                    <i class="fas fa-user"></i>
+                    </a></li>
                 </ul>
-                </nav>
+              </div>
             </div>
-            <div class = "wrapper">
-                <div class = "sidebar">
-                    
-                    <ul >
-                        <li><a href = "#"><i class="fa-solid fa-magnifying-glass"> Explore Topics </i></a></li>
-                        <li><a href = "#"><i class="fa-solid fa-comment-question"> Questions </i></a></li>
-                        
-                     </ul>
-                     <ul>
-                        <li><a href = "#"><i class="fa-solid fa-regular fa-square-question">My Questions</i></a></li>
-                        <li><a href = "#"><i class="fa-solid fa-pen-nib">My Answers</i></a></li>
-                     </ul>
-                </div>
-                <div class = "main-content">
-
-                </div>
-
-                </div>
-
-           
-
-        </div>
-    </body>
-    <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href = "#">
-                        <img src = "chat logo design (2).png" alt = "logo">
-                        <span class = "nav-item">Logo</span>
+            <div class="sidebar">
+                <nav>
+                <ul>
+                  <li class = "dropdown"><a href="#">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="title">Home</span></a></li>
+                  <li><a href="#">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <span class="title">Profile</span>
+                    </a></li>
+                  <li><a href="#">
+                    <span class="icon"><i class="fas fa-chart-bar"></i></span>
+                    <span class="title">Analytics</span>
+                    </a></li>
+                  <li class = "dropdown"><a href="#" class="feat-btn">
+                    <span class="icon"><i class="fas fa-magnifying-glass"></i></span>
+                    Topics
+                        <span class = "fas fa-caret-down"></span>
+                   
                     </a>
+               <.   <ul class = "feat-show">
+                    <li><a href = "#">UBC Campus Life</a></li>
+                    <li><a href = "#">Academic Advising</a></li>
+                    <li><a href = "#">Science & Technology</a></li>
+                    <li><a href = "#">UBC Arts</a></li>
+                    <li><a href = "#">Health and Wellness</a></li>
+                    <li><a href = "#">Career Opportunities</a></li>
+                </ul></li>
+                  <li><a href="#">
+                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="title">Settings</span>
+                    </a></li>
+                    <li><a href="#">
+                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                    <span class="title">Log Out</span>
+                    </a></li>
+                    <li><a href="#">
+                    <span class="icon"><i class="fas fa-question-circle"></i></span>
+                    <span class="title">Help</span>
+                    </a></li>
+              </ul>
+            </nav>
+            </div>
+            <script>
+                $('.feat-btn').click(function(){
+                    $('nav ul.feat-show').toggleClass("");
+                });
+            </script>
 
-                </li>
-                <li>
-                    <a href = "#">
-                        <i class = "fas fa-user"></i>
-                        <span class = "nav-item">Profile</span>
-
-                    </a>
-                </li>
-                <li>
-                   <a href = "#">
-                  <i class = "fas fa-topics"></i>
-                   <span class = "nav-item">Topics</span>
-                     </a>
-                </li>
-                <li>
-                    <a href = "#">
-                   <i class = "fas fa-chart-bar"></i>
-                    <span class = "nav-item">Analytics</span>
-                      </a>
-                 </li>
-                 <li>
-                    <a href = "#">
-                   <i class = "fas fa-cog"></i>
-                    <span class = "nav-item">Settings</span>
-                      </a>
-                 </li>
-                 <li>
-                    <a href = "#">
-                   <i class = "fas fa-question-circle"></i>
-                    <span class = "nav-item">Help</span>
-                      </a>
-                 </li>
-                 <li>
-                    <a href = "#">
-                   <i class = "fas fa-sign-out"></i>
-                    <span class = "nav-item">Log out</span>
-                      </a>
-                 </li>
-            </ul>
-        </nav>
+            
+       
     </body>
 </html>
