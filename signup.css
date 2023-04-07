@@ -35,6 +35,13 @@ body{
     display: block;
     margin: 0.5rem 0;
   }
+
+  .image{
+    align-items: right;
+    float: right;
+    position: relative;
+    display: flex;
+  }
   
   input,
   textarea,
