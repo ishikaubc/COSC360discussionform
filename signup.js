@@ -1,22 +1,52 @@
-const name = document.getElementById('name')
-const password = document.getElementById('password')
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
+const validation = new JustValidate("#signup");
+validation
+      .addField("#name", [
+        {
+            rule: "required"
+        }
+      ])
 
-form.addEventListener('submit',() => {
-    let messages = []
-    if(-name.value ===  '' || name.value === 'null'){
-        messages.push('Name is required')
-    }
-    if(password.value.length <= 6){
-        messages.push('Password must be longer than 6 characters')
-    }
-    if(password.value.length >= 20){
-        messages.push('Password must be less than 20 characters')
-    }
-    if(messages.length > 0 ){
-        e.preventDefault()
-        errorElement.innerText = messages.join(',')
-    }
-    
-})
+      .addField("#email", [
+        {
+            rule: "required"
+        },
+        {
+            rule: "email"
+        },
+        {
+            validator: (value) => () => {
+
+            return fetch("validate-email.php?email=" + encodeURIComponent(value))
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(json){
+                    return json.available;
+                });
+            }
+
+        }
+      ])
+
+      .addField("#password", [
+
+           {
+            rule: "required"
+           },
+           {
+            rule: "password"
+           }
+
+      ])
+      .addField("#password_confirmation", [
+        {
+            validator: (value, fields) => {
+                return value === fields["#password"].elem.value;
+            },
+            errorMessage: "Passwords should match"
+        }
+
+      ])
+      .onSuccess((event) => {
+         document.getElementById("signup").submit(); 
+      });
